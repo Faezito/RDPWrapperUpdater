@@ -34,10 +34,7 @@ func main() {
 
 	fmt.Println("[1/6] Parando Serviços de Área de Trabalho Remota")
 
-	stopErr := runCommand("net", "stop", "TermService")
-	if stopErr != nil {
-		fmt.Println("      Aviso ao parar servico:", stopErr)
-	}
+	_ = runCommand("net", "stop", "TermService")
 
 	fmt.Println("[2/6] Baixando arquivo atualizado...")
 
@@ -168,7 +165,7 @@ func isAdmin() bool {
 
 func fail(err error) {
 	fmt.Println("\nERRO:", err)
-	stopErr := runCommand("net", "start", "TermService")
+	_ = runCommand("net", "start", "TermService")
 	pause()
 }
 
