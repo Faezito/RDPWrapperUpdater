@@ -20,7 +20,7 @@ const (
 
 func main() {
 	fmt.Println("===================================")
-	fmt.Println("     Atualizador RDP Wrapper")
+	fmt.Println("     Atualizador RDP Wrapper v1.0 by Faezito")
 	fmt.Println("===================================")
 	fmt.Println()
 
